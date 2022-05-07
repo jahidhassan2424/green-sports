@@ -1,0 +1,9 @@
+.btn-social-login{
+    color: black;
+}
+.google-sign-in-button{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    border: 1 px solid rgb(221, 216, 216) !important;
+}

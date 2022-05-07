@@ -1,0 +1,12 @@
+.login-body{
+    margin: 30px 30%;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 15px !important;
+    padding: 10px;
+    box-shadow: 10px 10px 15px rgb(240, 238, 238);
+}   
+.submit-button{
+    padding: 10px 40px !important;
+    border-radius: 10px !important;
+    border: 0 !important;
+}

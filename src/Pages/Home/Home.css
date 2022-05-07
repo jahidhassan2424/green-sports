@@ -1,0 +1,7 @@
+.greeting-section{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.greeting-card{
+    border: 1px solid black ;
+}
