@@ -1,0 +1,19 @@
+.card-text{
+    height: 150px !important ;
+}
+.manage-button{
+    border: 1px solid black;
+    width: 90%;
+    padding: 1% 0;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 99999px;
+    align-content: center;
+    font-weight: 500;
+}
+.manage-button:hover{
+    color:  white;
+    border:none;
+    background-color: grey;
+   
+}

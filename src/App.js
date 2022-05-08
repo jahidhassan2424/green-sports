@@ -8,8 +8,11 @@ import Header from './Shared/Header/Header';
 import ManageItem from './Pages/ManageItem/ManageItem';
 import MyItem from './Pages/MyItem/MyItem';
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
-import NotFound from './Pages/NotFound/NotFound';
+
 import Home from './Pages/Home/Home/Home';
+import Footer from './Shared/Footer/Footer';
+import NotFound from './Shared/NotFound/NotFound';
+import ManageItems from './Pages/ManageItems/ManageItems';
 
 function App() {
   return (
@@ -21,11 +24,19 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         {/* <Route path='/blogs' element={<Blogs></Blogs>}></Route> */}
-        <Route path='/manageItem' element={
+
+        <Route path='/manageItems' element={
+          <RequiredAuth>
+            <ManageItems></ManageItems>
+          </RequiredAuth>
+        }></Route>
+
+        <Route path='/manageItem/:id' element={
           <RequiredAuth>
             <ManageItem></ManageItem>
           </RequiredAuth>
         }></Route>
+
         <Route path='/myItem' element={
           <RequiredAuth>
             <MyItem></MyItem>
@@ -34,6 +45,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes >
+      <Footer></Footer>
 
     </div>
   )

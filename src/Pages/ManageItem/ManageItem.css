@@ -1,0 +1,26 @@
+.single-product-detail{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    text-align: center;
+
+}
+table > tr{
+    border: 1px solid black;
+}
+tr > td{
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 400;
+
+}
+.head{
+    font-weight: 700;
+}
+.delevered > button{
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}

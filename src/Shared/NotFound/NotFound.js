@@ -1,10 +1,19 @@
 import React from 'react';
+import './NotFound.css'
 
 const NotFound = () => {
     return (
-        <div>
-            <h1 className='text-center mt-5'>404 :(</h1>
-            <h2 className='text-center'>Not found the page you are looking for. </h2>
+        <div className='not-found-body text-center mt-5 '>
+            <div id="notfound">
+                <div className="notfound">
+                    <div className="notfound-404">
+                        <h3>Oops! Page not found</h3>
+                        <h1><span>4</span><span>0</span><span>4</span></h1>
+                    </div>
+                    <h2>we are sorry, but the page you requested was not found</h2>
+                </div>
+            </div>
+
         </div>
     );
 };

@@ -75,7 +75,7 @@ const Login = () => {
                     <Form.Control ref={passRef} name="password" type="password" placeholder="Password" required />
                 </Form.Group>
                 <p className='text-danger fw-bold'>{error?.message}</p>
-                <p className='fs-5'>New to Dental Care? <Link className='text-decoration-none text-danger fw-bold' to={'/register'}>Register</Link></p>
+                <p className='fs-5'>New to GREEN SPORTS? <Link className='text-decoration-none text-danger fw-bold' to={'/register'}>Register</Link></p>
 
                 <div className='text-center mt-5 mb-3'>
                     <Button className='submit-button' variant="primary" type="submit">

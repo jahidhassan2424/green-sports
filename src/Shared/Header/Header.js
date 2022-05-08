@@ -1,17 +1,25 @@
 import React from 'react';
 import './Header.css'
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
-
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
 
 const Header = () => {
+    const navigate = useNavigate();
     const [user, loading, error] = useAuthState(auth);
 
     const handleSignOut = () => {
-        signOut(auth);
+
+        const confirmation = window.confirm('Are you sure?')
+        if (confirmation) {
+            signOut(auth);
+        }
+        else {
+            navigate('/');
+        }
+
     }
     return (
         <div>
@@ -31,7 +39,7 @@ const Header = () => {
                             {
                                 user ?
                                     <>
-                                        <Nav.Link as={Link} className='text-uppercase  text-white hover-effect ' to="manageItem">Manage Items</Nav.Link>
+                                        <Nav.Link as={Link} className='text-uppercase  text-white hover-effect ' to="manageItems">Manage Items</Nav.Link>
                                         <Nav.Link as={Link} className='text-uppercase  text-white hover-effect' to="myItem">My Items</Nav.Link>
                                         <Nav.Link onClick={handleSignOut} as={Link} className='text-uppercase  text-white hover-effect' to="login">Logout</Nav.Link>
 
