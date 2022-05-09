@@ -53,4 +53,15 @@
   margin-top: 100vh;
 } */
 
+@media all and (max-width:576px) {
+    
+.login-body{
+    margin: 0 !important;
+    
+}
+.footer-body{
+    text-align: centerp;
+}
+
+}
 
