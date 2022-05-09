@@ -9,6 +9,7 @@ import { useUpdateProfile } from 'react-firebase-hooks/auth';
 // import Toast from './../Shared/Toast';
 import { async } from '@firebase/util';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import Loading from './../../Shared/Loading/Loading';
 
 
 const Register = () => {
@@ -47,17 +48,7 @@ const Register = () => {
         <div className='login-body'>
 
             {/* Custom Toast Message */}
-            <ToastContainer
-                position="top-right"
-                autoClose={2000}
-                hideProgressBar={true}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
+            <ToastContainer />
 
             {/* Registration Form */}
             <Form onSubmit={handleRegister} className='container  '>
@@ -81,6 +72,9 @@ const Register = () => {
                     <Form.Check onClick={() => setAgree(!agree)} className='text-danger fw-bold' type="checkbox" label="Agree to Tearms and Condition" />
                 </Form.Group>
                 <p className='fs-5'>Already have an account? <Link className='text-decoration-none text-danger fw-bold' to={'/login'}>Login</Link></p>
+                {
+                    loading && <Loading></Loading>
+                }
 
                 <div className='text-center mt-5 mb-3'>
                     {

@@ -14,6 +14,7 @@ import Footer from './Shared/Footer/Footer';
 import NotFound from './Shared/NotFound/NotFound';
 import ManageItems from './Pages/ManageItems/ManageItems';
 import { ToastContainer } from 'react-toastify';
+import Loading from './Shared/Loading/Loading';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/loading' element={<Loading></Loading>}></Route>
         {/* <Route path='/blogs' element={<Blogs></Blogs>}></Route> */}
 
         <Route path='/manageItems' element={
