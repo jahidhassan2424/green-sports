@@ -2,6 +2,7 @@ import React from 'react';
 import useLoadData from '../../hooks/useLoadData';
 import ManageItemsSingle from './ManageItemsSingle';
 import './ManageItems.css'
+import { Link } from 'react-router-dom';
 
 const ManageItems = () => {
     const [products] = useLoadData();
@@ -9,13 +10,13 @@ const ManageItems = () => {
 
     return (
         <div className='container mt-2 '>
-            <div className='add-more-button'><button >ADD MORE</button></div>
+            <div className='add-more-button'><Link as={Link} to="/add">ADD MORE</Link></div>
             <div className='add-item-section'>
-            <div>
-                <form >
-                    
-                </form>
-            </div>
+                <div>
+                    <form >
+
+                    </form>
+                </div>
             </div>
             <h1 className='text-center ' style={{ fontSize: "4rem" }}>Manage Your Products</h1>
             <table className='mx-auto mt-3' style={{ border: "3px solid black" }}>

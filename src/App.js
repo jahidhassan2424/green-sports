@@ -15,6 +15,8 @@ import ManageItems from './Pages/ManageItems/ManageItems';
 import { ToastContainer } from 'react-toastify';
 import Loading from './Shared/Loading/Loading';
 import Chart from './Pages/Home/Chart/Chart';
+import AddItem from './Pages/AddItem/AddItem';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/chart' element={<Chart></Chart>}></Route>
+        <Route path='/add' element={<AddItem></AddItem>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
         <Route path='/manageItems' element={
           <RequiredAuth>

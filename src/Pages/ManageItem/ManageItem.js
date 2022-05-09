@@ -116,7 +116,7 @@ const ManageItem = () => {
                                 </div>
 
                             </div>
-                            <div className='mt-5'><img src={"https://i.ibb.co/59BzD4n/lesly-juarez-g-NYQx-I5uf-II-unsplash.jpg"} alt="" /></div>
+                            <div className='mt-5'><img src={detail.img} alt="" /></div>
                         </div>
 
                     </div>

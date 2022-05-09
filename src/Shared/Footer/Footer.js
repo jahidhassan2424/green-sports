@@ -37,8 +37,8 @@ const Footer = () => {
                                 <h5 className="text-white mb-3">Quick links</h5>
                                 <ul className="list-unstyled text-muted">
                                     <li><Link to="/">Home</Link></li>
-                                    <li><Link to="manageItem">Manage Item</Link></li>
-                                    <li><Link to="myItem">My Items</Link></li>
+                                    <li><Link to="/manageItem">Manage Item</Link></li>
+                                    <li><Link to="/myItem">My Items</Link></li>
 
                                 </ul>
                             </div>
@@ -52,10 +52,10 @@ const Footer = () => {
                                             ?
                                             <><li><button type="button" className="btn btn-link footer-logout" style={{ textDecoration: "none", color: "white", padding: "0px" }}>Logout</button> </li> </>
                                             :
-                                            <><li><Link as={Link} to="login">Login</Link></li> </>
+                                            <><li><Link as={Link} to="/login">Login</Link></li> </>
                                     }
-                                    <li><Link as={Link} to="#">Get started</Link></li>
-                                    <li><Link as={Link} to="#">FAQ</Link></li>
+                                    <li><Link as={Link} to="/#">Get started</Link></li>
+                                    <li><Link as={Link} to="/#">FAQ</Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-4 col-md-6">
