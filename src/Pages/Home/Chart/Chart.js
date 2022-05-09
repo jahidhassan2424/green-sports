@@ -72,7 +72,7 @@ const Chart = () => {
         },
     ];
     return (
-        <div className='container'>
+        <div className='container chart-container'>
             <LineChart width={1250} height={300} data={data}>
                 <Line type="monotone" dataKey="uv" stroke="#8884d8" />
                 <CartesianGrid stroke="#ccc" />

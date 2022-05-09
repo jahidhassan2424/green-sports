@@ -14,18 +14,18 @@ const ManageItemsSingle = ({ p }) => {
         navigate(`/manageItem/${id}`);
     }
     const handleRemoveItem = async (id) => {
-        const result = fetch(`https://vast-taiga-73720.herokuapp.com/product?id=${id}`, {
-            method: 'delete',
-        })
-            .then(res => res.json())
-            .then(data => {
-                const remaining = products.filter(product => product._d !== id)
-                console.log('Remaining:', remaining);
-                setProducts(remaining);
+        const confirmation = window.confirm("Are you sure you want to delete this Item?")
+        if (confirmation) {
+            const result = fetch(`https://vast-taiga-73720.herokuapp.com/product?id=${id}`, {
+                method: 'delete',
             })
-
-
-
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = products.filter(product => product._d !== id)
+                    console.log('Remaining:', remaining);
+                    setProducts(remaining);
+                })
+        }
 
     }
 
