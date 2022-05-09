@@ -6,6 +6,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import auth from './../../firebase.init';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Loading/Loading';
 
 const SocialLogin = () => {
     const navigate = useNavigate();
@@ -19,7 +20,9 @@ const SocialLogin = () => {
 
     return (
         <div>
-
+            {
+                loading && <Loading></Loading>
+            }
             <button onClick={() => signInWithGoogle()} className='btn-social-login rounded-full px-5 py-2 font-bold bg-white'>
                 <div className='google-sign-in-button '>
                     <div><img className='pr-3' src="https://i.ibb.co/RbwkZNf/google.png" alt="" /></div>

@@ -6,4 +6,27 @@
     padding: 0px;
     gap: 10px;
 }
+@media all and (max-width:576px) {
+    .greeting-section{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    background: rgb(241, 237, 237);
+    
+}
+.category-body{
+    display: none;
+}
+.carousal-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+.featured-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+}
 

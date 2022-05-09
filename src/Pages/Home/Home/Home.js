@@ -8,8 +8,6 @@ import Featured from '../Featured/Featured';
 import Greetings from '../Greetings/Greetings';
 import './Home.css'
 
-
-
 const Home = () => {
 
     return (

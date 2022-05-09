@@ -1,8 +1,10 @@
 .greeting-section{
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr ;
+    background: rgb(241, 237, 237);
     
 }
 .greeting-card{
     border: 1px solid black ;
 }
+
