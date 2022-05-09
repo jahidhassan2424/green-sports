@@ -1,0 +1,10 @@
+.add-more-button {
+    text-align: right;
+}
+.add-more-button> button{
+    border: 2px solid black;
+    padding:10px 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}

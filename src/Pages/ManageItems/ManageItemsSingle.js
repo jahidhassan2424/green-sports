@@ -3,15 +3,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faCirclePlus, faCoffee, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import useLoadData from '../../hooks/useLoadData';
+import { useState } from 'react';
 
 const ManageItemsSingle = ({ p }) => {
     const navigate = useNavigate();
     const { name, quantity, supplier, sold, _id } = p;
-    let count = 1;
-    const handleAddItem = () => {
-        navigate
+    const [products, setProducts] = useLoadData();
+    const handleAddItem = (id) => {
+        navigate(`/manageItem/${id}`);
     }
-    const handleRemoveItem = () => {
+    const handleRemoveItem = async (id) => {
+        const result = fetch(`http://localhost:5000/product?id=${id}`, {
+            method: 'delete',
+        })
+            .then(res => res.json())
+            .then(data => {
+                const remaining = products.filter(product => product._d !== id)
+                console.log('Remaining:', remaining);
+                setProducts(remaining);
+            })
+
+
+
 
     }
 

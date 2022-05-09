@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import './Footer.css'
-// import { SocialIcon } from 'react-social-icons';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
@@ -37,9 +36,9 @@ const Footer = () => {
                             <div className="col-lg-2 col-md-6">
                                 <h5 className="text-white mb-3">Quick links</h5>
                                 <ul className="list-unstyled text-muted">
-                                    <li><Link as={Link} to="/">Home</Link></li>
-                                    <li><Link as={Link} to="manageItem">Manage Item</Link></li>
-                                    <li><Link as={Link} to="myItem">My Items</Link></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="manageItem">Manage Item</Link></li>
+                                    <li><Link to="myItem">My Items</Link></li>
 
                                 </ul>
                             </div>

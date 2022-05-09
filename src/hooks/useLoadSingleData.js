@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 
-const LoadSingleData = (id) => {
+const useLoadSingleData = (id) => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/product?_id=${id}`)
@@ -12,4 +12,4 @@ const LoadSingleData = (id) => {
     return { product };
 };
 
-export default LoadSingleData;
+export default useLoadSingleData;

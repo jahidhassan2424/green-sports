@@ -1,14 +1,16 @@
 import React from 'react';
-import LoadData from './../../../hooks/LoadData';
+import useLoadData from '../../../hooks/useLoadData';
 import SingleFeatured from './SingleFeatured/SingleFeatured';
 import './Featured.css'
 
 const Featured = () => {
-    const [products] = LoadData([]);
+    const [products] = useLoadData();
     return (
         <div className='featured-section'>
+
             {
-                products.slice(2).map(product => <SingleFeatured
+
+                products.slice(0, 6).map(product => <SingleFeatured
                     key={product._id}
                     product={product}
                 ></SingleFeatured>)

@@ -35,11 +35,11 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} className='text-uppercase  text-white hover-effect' to="/">HOME</Nav.Link>
+                            <Nav.Link as={Link} className='text-uppercase  text-white hover-effect ' to="manageItems">Manage Items</Nav.Link>
 
                             {
                                 user ?
                                     <>
-                                        <Nav.Link as={Link} className='text-uppercase  text-white hover-effect ' to="manageItems">Manage Items</Nav.Link>
                                         <Nav.Link as={Link} className='text-uppercase  text-white hover-effect' to="myItem">My Items</Nav.Link>
                                         <Nav.Link onClick={handleSignOut} as={Link} className='text-uppercase  text-white hover-effect' to="login">Logout</Nav.Link>
 

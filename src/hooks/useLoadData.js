@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
-// import { fetch } from 'node-fetch';
 
-const LoadData = () => {
+const useLoadData = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
-    return [products];
+    return [products, setProducts];
 }
 
-export default LoadData;
+export default useLoadData;
 

@@ -21,7 +21,6 @@ const ManageItem = () => {
 
     }, [status])
 
-
     const handleDeliveredOrAdd = async (id, method) => {
         // Quantity will be removed by one 
         let quantityChange;
@@ -86,7 +85,10 @@ const ManageItem = () => {
                                 </table>
                                 <div className='d-flex justify-content-between'>
                                     <div className='delevered mt-3'><button onClick={() => handleDeliveredOrAdd(detail._id, "delivered")} >Delivered</button></div>
-                                    <div className='delevered mt-3'><button onClick={() => handleDeliveredOrAdd(detail._id, "add")} >Add More</button></div>
+                                    <div className='delevered mt-3'>
+                                        <input className='w-50' type="text" />
+                                        <button onClick={() => handleDeliveredOrAdd(detail._id, "add")} >Add More</button>
+                                    </div>
                                 </div>
 
                             </div>
