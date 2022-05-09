@@ -13,9 +13,7 @@ const ManageItems = () => {
             <div className='add-more-button'><Link as={Link} to="/add">ADD MORE</Link></div>
             <div className='add-item-section'>
                 <div>
-                    <form >
-
-                    </form>
+                    
                 </div>
             </div>
             <h1 className='text-center ' style={{ fontSize: "4rem" }}>Manage Your Products</h1>

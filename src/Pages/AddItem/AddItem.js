@@ -10,7 +10,7 @@ const AddItem = () => {
     const [user] = useAuthState(auth)
 
     const onSubmit = (data) => {
-        const url = 'http://localhost:5000/products';
+        const url = 'https://vast-taiga-73720.herokuapp.com/products';
         fetch(url, {
             method: "POST",
             headers: {

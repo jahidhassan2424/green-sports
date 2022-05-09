@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## [Live Site](https://green-sports-18e07.web.app/)
+
+## Features
+* Slider
+* Google Sign In
+* Email Verification
+* Password Reset
+* Toast
+
+## Tools Used
+* React Router
+* Firebase Authentication
+* React Bootstrap
+* React Social Icon
+* React Firebase Hook
+* Custom Hook
+
 ## Available Scripts
 
 In the project directory, you can run:
