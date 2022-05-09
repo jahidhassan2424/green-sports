@@ -1,15 +1,15 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
 
 const LoadSingleData = (id) => {
     const [product, setProduct] = useState([]);
-    useEffectt(() => {
+    useEffect(() => {
         fetch(`http://localhost:5000/product?_id=${id}`)
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setProduct(data))
     }, [])
-    return [products];
+    return { product };
 };
 
 export default LoadSingleData;

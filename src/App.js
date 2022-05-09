@@ -13,6 +13,7 @@ import Home from './Pages/Home/Home/Home';
 import Footer from './Shared/Footer/Footer';
 import NotFound from './Shared/NotFound/NotFound';
 import ManageItems from './Pages/ManageItems/ManageItems';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
 
       </Routes >
       <Footer></Footer>
+      <ToastContainer />
 
     </div>
   )
