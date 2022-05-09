@@ -19,18 +19,20 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const emailRef = useRef('');
+    const nameRef = useRef('');
     const passwordRef = useRef('');
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
     const [updateProfile, updating, error1] = useUpdateProfile(auth);
-    const handleRegister = async (event) => {
+
+    const handleRegister = (event) => {
         event.preventDefault();
-        const displayName = event.target.name.value;
-        const email = emailRef.current.value;
+        const displayName = event.target.current.value;
         const password = passwordRef.current.value;
-        if (email) {
-            await createUserWithEmailAndPassword(email, password)
-        }
+        const email = event.target.email.value;
+        console.log(email, password, displayName);
+        createUserWithEmailAndPassword(email, password)
+
         updateProfile({ displayName })
     }
     if (user) {
@@ -63,7 +65,7 @@ const Register = () => {
                     <h1 className='text-center'>Register</h1>
 
                     <Form.Label className='fs-4'>Your Name</Form.Label>
-                    <Form.Control name="name" type="text" placeholder="Enter Name" required />
+                    <Form.Control ref={nameRef} name="name" type="text" placeholder="Enter Name" required />
 
                     <Form.Label className='fs-4 mt-3'>Email address</Form.Label>
                     <Form.Control name="email" type="email" placeholder="Enter email" required />

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const useLoadSingleData = (id) => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/product?_id=${id}`)
+        fetch(`https://vast-taiga-73720.herokuapp.com/product?_id=${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])

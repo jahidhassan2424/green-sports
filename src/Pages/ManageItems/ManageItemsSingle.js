@@ -14,7 +14,7 @@ const ManageItemsSingle = ({ p }) => {
         navigate(`/manageItem/${id}`);
     }
     const handleRemoveItem = async (id) => {
-        const result = fetch(`http://localhost:5000/product?id=${id}`, {
+        const result = fetch(`https://vast-taiga-73720.herokuapp.com/product?id=${id}`, {
             method: 'delete',
         })
             .then(res => res.json())

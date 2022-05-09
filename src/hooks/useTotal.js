@@ -1,11 +1,11 @@
 
 const useTotal = () => {
     useEffect(() => {
-        fetch('http://localhost:5000/total')
+        fetch('https://vast-taiga-73720.herokuapp.com/total')
             .then(res => res.json())
             .then(data => console.log(data))
     }, [])
-    return[]
+    return []
 };
 
 export default useTotal;

@@ -15,7 +15,7 @@ const ManageItem = () => {
     const detail = singleProduct?.result;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product?id=${id}`)
+        fetch(`https://vast-taiga-73720.herokuapp.com/product?id=${id}`)
             .then(res => res.json())
             .then(data => setSingleProduct(data))
 
@@ -29,7 +29,7 @@ const ManageItem = () => {
         const sold = detail?.sold + 1;
         const add = 1;
         let body;
-        const url = `http://localhost:5000/product?id=${id}`;
+        const url = `https://vast-taiga-73720.herokuapp.com/product?id=${id}`;
         (method === "delivered") ? body = { id, quantityChange, sold } : body = { id, quantityChange, add };
         const result = await axios.put(url, body);
         // setStatus two times because if the value doesn't change re-fetch will not work
@@ -46,7 +46,7 @@ const ManageItem = () => {
             const newQuantity = previousQuantity + parseInt(event.target.quantity.value);
             const quantityChange = newQuantity;
             const id = detail._id;
-            const url = `http://localhost:5000/product?id=${id}`;
+            const url = `https://vast-taiga-73720.herokuapp.com/product?id=${id}`;
             const body = {
                 id, quantityChange
             }

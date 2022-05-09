@@ -65,6 +65,8 @@ const Login = () => {
                     <Form.Label className='fs-4'>Password</Form.Label>
                     <Form.Control ref={passRef} name="password" type="password" placeholder="Password" required />
                 </Form.Group>
+
+                
                 <p className='text-danger fw-bold'>{error?.message.slice(9)}</p>
 
                 <p className='fs-5'>New to GREEN SPORTS? <Link className='text-decoration-none text-danger fw-bold' to={'/register'}>Register</Link></p>
