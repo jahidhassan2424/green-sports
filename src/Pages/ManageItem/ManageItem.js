@@ -39,6 +39,28 @@ const ManageItem = () => {
         toast.success(`Data Updated Succesfully`, { autoClose: 1500 });
     }
 
+    const handlePrecessAddMore = event => {
+        event.preventDefault();
+        const handleAddMore = async () => {
+            const previousQuantity = detail.quantity;
+            const newQuantity = previousQuantity + parseInt(event.target.quantity.value);
+            const quantityChange = newQuantity;
+            const id = detail._id;
+            const url = `http://localhost:5000/product?id=${id}`;
+            const body = {
+                id, quantityChange
+            }
+            const result = await axios.put(url, body);
+            setStatus(result.status);
+            console.log(result);
+            setStatus(0);
+            toast.success(`Data Updated Succesfully`, { autoClose: 1500 });
+        }
+
+        handleAddMore();
+        event.target.reset();
+    }
+
     return (
         <div className='container h2'>
 
@@ -83,11 +105,13 @@ const ManageItem = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div className='d-flex justify-content-between'>
+                                <div className='d-flex flex-column justify-content-between'>
                                     <div className='delevered mt-3'><button onClick={() => handleDeliveredOrAdd(detail._id, "delivered")} >Delivered</button></div>
                                     <div className='delevered mt-3'>
-                                        <input className='w-50' type="text" />
-                                        <button onClick={() => handleDeliveredOrAdd(detail._id, "add")} >Add More</button>
+                                        <form onSubmit={handlePrecessAddMore}>
+                                            <input className='w-50' type="number" name="quantity" />
+                                            <button  >Add More</button>
+                                        </form>
                                     </div>
                                 </div>
 
